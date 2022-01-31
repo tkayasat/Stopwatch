@@ -1,12 +1,15 @@
 package com.example.stopwatch
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import com.example.stopwatch.data.TimestampProviderImpl
+import com.example.stopwatch.data.calculate.ElapsedTimeCalculator
+import com.example.stopwatch.data.calculates.StopwatchStateCalculator
+import com.example.stopwatch.databinding.ActivityMainBinding
+import com.example.stopwatch.viewmodel.StopwatchStateHolder
+import com.example.stopwatch.viewmodel.StopwatchViewModel
+import com.example.stopwatch.viewmodel.StopwatchViewModelFactory
+
 
 class MainActivity : AppCompatActivity() {
 
